@@ -1,4 +1,4 @@
-package src.learnGubin.lesson7.task3;
+package src.learnGubin.lesson7Strings.task3;
 
 /**
  * Напишите программу, которая для строки выводит количество слов,
@@ -9,16 +9,17 @@ public class Statistics {
         String str = "hello, World123., qwerty   Abcde";
         statistics(str);
     }
-    static void statistics(String s){
-        char[]arrChar = s.toCharArray();
+
+    static void statistics(String s) {
+        char[] arrChar = s.toCharArray();
         int countWord = s.split(" +").length;
         int countUpLetter = 0;
         int countDownLetter = 0;
         int countNumber = 0;
         for (int i = 0; i < arrChar.length; i++) {
-            if(Character.isUpperCase(arrChar[i])) countUpLetter++;
-            if(Character.isLowerCase (arrChar[i])) countDownLetter++;
-            if(!Character.isLetter(arrChar[i]) && !Character.isWhitespace(arrChar[i])) countNumber++;
+            if (Character.isUpperCase(arrChar[i])) countUpLetter++;
+            if (Character.isLowerCase(arrChar[i])) countDownLetter++;
+            if (!Character.isLetter(arrChar[i]) && !Character.isWhitespace(arrChar[i])) countNumber++;
         }
         System.out.println("Количество слов = " + countWord);
         System.out.println("Прописных букв = " + countUpLetter);

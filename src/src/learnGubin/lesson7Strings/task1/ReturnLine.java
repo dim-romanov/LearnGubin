@@ -1,4 +1,4 @@
-package src.learnGubin.lesson7.task1;
+package src.learnGubin.lesson7Strings.task1;
 
 /**
  * Напишите программу, которая создает строку обратной к заданной строке

@@ -1,6 +1,4 @@
-package src.learnGubin.lesson7.task2;
-
-import java.util.StringTokenizer;
+package src.learnGubin.lesson7Strings.task2;
 
 /**
  * Напишите программу, которая принимает строку и удаляет из этой строки все пробелы.
