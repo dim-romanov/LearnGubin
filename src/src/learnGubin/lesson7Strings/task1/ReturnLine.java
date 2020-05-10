@@ -8,8 +8,8 @@ public class ReturnLine {
         String str = "Привет Мир";
         System.out.println(reversLine(str));
     }
-    static String reversLine(String s){
-        StringBuilder reversL = new StringBuilder(s);
-        return String.valueOf(reversL.reverse());
+    static String reversLine(String string){
+        StringBuilder revers = new StringBuilder(string);
+        return String.valueOf(revers.reverse());
     }
 }

@@ -5,36 +5,34 @@ package src.learnGubin.lesson7Strings.expression;
  */
 public class Expression {
     public static void main(String[] args) {
-        String str = "10+5-10+3+ 12";
+        String str = "123+74854-45+12";
         expressionResult(str);
 
     }
 
-    static int expressionResult(String s) {
-        int countSum = 0;
-        s = s.replaceAll(" ", "");
-        char[] charsArr = s.toCharArray();
-        char[] chars = new char[charsArr.length];
-        for (int i = 0, j = 0; i < charsArr.length; i++) {
-            if (charsArr[i] == '+' || charsArr[i] == '-') {
-                chars[j] = charsArr[i];
-                j++;
+    static int expressionResult(String expression) {
+        int resultExpression = 0;
+        String[] symbols = expression
+                .replaceAll(" ","")
+                .split("[\\d]");
+        String[] tokens = expression
+                .replaceAll(" ","")
+                .split("\\+|-|\\*|/");
+        if (tokens.length >= 1) {
+            resultExpression += Integer.parseInt(tokens[0]);
+            for (int i = 0, j = 1; i < symbols.length; i++) {
+                if (!symbols[i].isEmpty()) {
+                    if (symbols[i].equals("+")) {
+                        resultExpression += Integer.parseInt(tokens[j]);
+                    }
+                    if (symbols[i].equals("-")) {
+                        resultExpression -= Integer.parseInt(tokens[j]);
+                    }
+                    j++;
+                }
             }
         }
-        String[] strings = s.split("\\+|-|\\*|/");
-        if (strings.length >= 1) {
-            countSum += Integer.parseInt(strings[0]);
-            for (int i = 0, j = 1; i < chars.length; i++) {
-                if (chars[i] == '+') {
-                    countSum += Integer.parseInt(strings[j]);
-                }
-                if (chars[i] == '-') {
-                    countSum -= Integer.parseInt(strings[j]);
-                }
-                j++;
-            }
-        }
-        System.out.println(countSum);
-        return countSum;
+        System.out.println(resultExpression);
+        return resultExpression;
     }
 }
