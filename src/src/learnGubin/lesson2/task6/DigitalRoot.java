@@ -24,5 +24,6 @@ public class DigitalRoot {
         }
         if(root > 9) root = digitalRoot(root);
         return root;
+        //return (inputNumber != 0 && inputNumber%9 == 0) ? 9 : inputNumber % 9;
     }
 }
