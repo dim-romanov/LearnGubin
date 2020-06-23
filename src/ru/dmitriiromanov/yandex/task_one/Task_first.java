@@ -59,7 +59,7 @@ public class Task_first {
     static char getSymbol(char symbol, int shift) {
         char newSymbol = 0;
         char[] symbolArr = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-                'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'z', 'y', 'z'};
+                'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         for (int i = 0; i < symbolArr.length; i++) {
             if (symbol == symbolArr[i]) {
                 if ((symbolArr.length - 1) - i >= shift) {
